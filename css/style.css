@@ -2,18 +2,11 @@ body{
     margin:50px 0px;
     font-family: sans-serif;
 }
-.divider--dark {
-    border-color: #2c3e50;
- }
- /* Nav Style */
- 
  .container{
      padding: 0;
-     /* margin: 0px; */
  }
  .row{
      margin: 0px;
-     /* width: inherit; */
  }
  @media screen and (min-width: 320px) {
     .nav__bg {
@@ -35,24 +28,12 @@ body{
         padding: 0;
     } 
  }
-
- .nav__brand {
-    color: #fff;
-    font-size: 1.5em;
-    text-transform: uppercase;
-    padding-top: 10px;
-    padding-bottom: 10px;
- }
  .nav-display
  {
      display: block;
  }
 
- @media screen and (min-width: 1024px) {max-width
-    .nav__brand {
-       font-size: 2em;
-    }
- 
+ @media screen and (min-width: 1024px) {
  .fixed-top{
      right: auto;
      left: auto;
@@ -107,7 +88,7 @@ li{
         
     }
  }
- @media screen and (min-width: 769px) {
+ @media screen and (mzin-width: 769px) {
     .div-index{
         margin: 0;
     }
@@ -123,10 +104,6 @@ li{
         padding: 0px 15px 0px 0px;
     }
  }
- /*.div-index{
-    margin: 0;
-    padding: 0px;
-}*/
 .nav-content{
     color: black;
 }
