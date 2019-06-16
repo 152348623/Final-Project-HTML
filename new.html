@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
     integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/Philosophy.css">
   <link rel="stylesheet" href="css/new.css">
 
   <meta http-equiv="Content-Security-Policy" content="img-src * 'self' data: https:">
@@ -16,14 +17,12 @@
 </head>
 
 <body background="images/background.jpg">
-  <div class="container-fluid">
-  </div>
   <header>
     <div class="container">
-      <div class="row">
-        <div class="col-lg-3 col-md-12 col-sm-12 menu">
-          <nav class="navbar fixed-top navbar-expand-lg navbar-dark nav-menu nav__bg">
-            <button class="navbar-toggler nav__bg" type="button" data-toggle="collapse"
+      <div class="row ph-row-1">
+        <div class="col-lg-3 col-md-1 col-xs-1 menu">
+          <nav class="navbar fixed-top navbar-expand-lg navbar-dark nav-menu">
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
               data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
               aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -32,12 +31,19 @@
               <ul class="navbar-nav nav-display nav__bg" style="text-align: center;">
                 <li class="nav-item">
                   <a class="nav-link" href="index.html">
-                  <img src="images/logo.jpg" alt="" class="img-logo">
+                    <img src="images/logo.jpg" alt="" class="img-logo">
                   </a>
                 </li>
-                <li class="nav-item li-content">
-                  <a class="nav-link text-body nav-li-a-content" href="intro.html">餐廳介紹
-                    </a>
+                <li class="nav-item dropdown li-content">
+                  <a class="nav-link dropdown-toggle nav-li-a-content" href="#" id="navbarDropdownMenuLink"
+                    role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                    style="color:black;">
+                    餐廳介紹
+                  </a>
+                  <div class="dropdown-menu nav-li-a-content" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item nav-li-a-content" href="#">關於</a>
+                    <a class="dropdown-item nav-li-a-content" href="#">經營理念</a>
+                  </div>
                 </li>
                 <hr>
                 <li class="nav-item li-content">
@@ -45,22 +51,82 @@
                   </a>
                 </li>
                 <hr>
-                <li class="nav-item li-content">
-                  <a class="nav-link text-body nav-li-a-content" href="menu.html">菜單
+                <li class="nav-item dropdown li-content">
+                    <a class="nav-link dropdown-toggle nav-li-a-content" href="#" id="navbarDropdownMenuLink"
+                      role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                      style="color:black;">
+                      菜單介紹
                     </a>
-                </li>
+                    <div class="dropdown-menu nav-li-a-content" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item nav-li-a-content" href="#">主餐</a>
+                      <a class="dropdown-item nav-li-a-content" href="#">飲品</a>
+                    </div>
+                  </li>
                 <hr>
-                <li class="nav-item li-content">
-                  <a class="nav-link text-body nav-li-a-content" href="order.html">網路預約
-                    </a>
+                <li class="nav-item dropdown li-content">
+                  <a class="nav-link dropdown-toggle nav-li-a-content" href="#" id="navbarDropdownMenuLink"
+                    role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                    style="color:black;">
+                    網路預約
+                  </a>
+                  <div class="dropdown-menu nav-li-a-content" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item nav-li-a-content" href="#">預約</a>
+                    <a class="dropdown-item nav-li-a-content" href="#">預約查詢</a>
+                  </div>
                 </li>
               </ul>
             </div>
-
           </nav>
         </div>
-        <div class="col-lg-9 col-sm-12 div-index">
-          <img src="images/index.jpg" alt="" class="img-responsive img-index">
+        <div class="col-lg-9 col-md-11 col-xs-12 div-index">
+          <div class="row ph-row">
+            <div class="col-lg-12 col-md-11 col-xs-12 ph-title">
+              湯明茶樓 經營理念
+            </div>
+            <div class="col-lg-12 col-md-11 col-xs-12">
+              <hr>
+            </div>
+            <div class="col-lg-12 col-md-11 col-xs-12">
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="#" class="breadcrumb-item-content">首頁</a></li>
+                  <li class="breadcrumb-item"><a href="#" class="breadcrumb-item-content">餐廳介紹</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">經營理念</li>
+                </ol>
+              </nav>
+            </div>
+            <div class="col-lg-12 col-md-11 col-xs-12">
+              <div class="row Philosophy-content">
+                <div class="col-lg-7 col-md-12 col-xs-12  resume">
+                  <p class="resume__description">
+                    <!-- <h6> -->
+                    新竹最美的時尚老宅 <br> <br>
+
+                    我們將巷弄內50年的老宅~重新賦予新的簡約時尚面貌，<br>
+                    直達3樓視覺貫穿的空間設計，<br>
+                    讓大家體驗不一樣的環境舒適感<br>
+
+                    摩登簡約的現代感空間我們提供的是新式的"台菜餐點"<br>
+                    希望用最樸實的美食來與各位分享<br>
+
+                    茶樓初心就是分享好茶、好環境、好美味的餐點，<br>
+                    想把好茶介紹給大家，原葉現沏，享受台茶新滋味，<br>
+                    每一杯都是新鮮現泡才能喝出好茶的好味道，<br>
+                    喝台茶也是可以很時尚<br>
+                    歡迎大家～涖臨我們用心推出的台菜餐廳<br>
+
+                    全日提供湯明全食套餐～<br>
+                    也歡迎大家預約用餐<br>
+                    湯明茶樓<br>
+                  </p>
+                  <!-- </h6>  -->
+                </div>
+                <div class="col-lg-5 col-md-12 col-xs-12 ph-content-img">
+                  <img src="images/Philosophy.jpg" alt="" class="content-img">
+                </div>
+              </div>
+            </div>
+          </div> <!-- row -->
         </div>
       </div>
     </div>
