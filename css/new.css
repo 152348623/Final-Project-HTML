@@ -1,0 +1,119 @@
+@media screen and (min-width: 320px) {
+    .ph-row-1{
+        margin: 0px 0px 0px 45px;
+    }
+    /*.nav-menu{
+        padding:10px 0px 10px 16px;
+    }*/
+}
+@media screen and (min-width: 768px) {
+    .ph-row-1{
+        margin: 0px 0px 0px 0px;
+    }
+    /*.nav-menu{
+        padding: 10px 0px 10px 15px;
+    }*/
+ }
+ @media screen and (min-width: 1024px) {
+    .nav-menu{
+        padding: 0px;
+    }
+ }
+
+.ph-title{
+    color: rgb(127, 87, 87);
+    font-size: 30px;
+    font-family: "sans-serif";
+    font-weight: bold;
+    font-style: italic;
+}
+.Philosophy-content{
+     background-color: rgba(255, 255, 255, 0.5); 
+    padding:20px 0px;
+}
+@media screen and (min-width: 320px) {
+    .ph-title{
+    padding: 18px 0px 0px 15px;
+    font-size: 25px;
+    }
+    .Philosophy-content{
+        background-color: rgba(255, 255, 255,0.5); 
+    }
+}
+@media screen and (min-width: 768px) {
+    .ph-title{
+        padding-left: 10px;
+        font-size:30px;
+        }
+    .content-img{
+        width: 40%;
+    }
+    .ph-row{
+        margin:0px 0px 45px 0px;
+    }
+    .Philosophy-content{
+        background-color: rgba(255, 255, 255, 0.5); 
+        padding:20px 0px;
+    }
+ }
+ @media screen and (min-width: 769px) {
+    .Philosophy-content{
+        white-space: nowrap;
+    }
+    .ph-row{
+        margin:140px 0px 0px 0px;
+    }
+    .content-img{
+        width: 100%;
+    }
+ }
+
+ .ph-content-img{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+ @media screen and (min-width: 768px) {
+    .ph-content-img{
+        display: flex;
+        justify-content: flex;
+        align-items: center;
+    }
+    .content-img{
+        width: 50%;
+    }
+
+ }
+ @media screen and (min-width: 1024px) {
+    .ph-content-img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0px;
+
+    }
+    .content-img{
+        width: 80%;
+    }
+
+ }
+.margin-div{
+    margin: 0px 0px 10px 0px;
+}
+
+.nav-li-a-content{
+    color: black;
+    text-align: center;
+}
+.breadcrumb{
+    background-color: rgba(255, 255, 255,0);
+}
+.breadcrumb-item-content{
+    color: black;
+}
+.breadcrumb-item.active{
+    font-weight: bold;
+    color:black;
+    text-decoration: underline;
+}
+ 

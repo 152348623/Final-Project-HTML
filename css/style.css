@@ -20,7 +20,7 @@ body{
         max-width:none;
     }
  }
- @media screen and (min-width: 738px) {
+ @media screen and (min-width: 768px) {
 
      .nav-menu{
          padding: 10px 0px 10px 15px;
@@ -118,6 +118,9 @@ li{
     .img-logo {
         max-width: 100%;
      }
+     .img-index{
+         height: 80%;
+     }
  }
  .nav-link{
      padding: 0px;
@@ -147,5 +150,8 @@ li{
 }
 }
 .navbar-nav{
-    padding: 15px;
+    padding: 10px 15px 15px 15px;
+}
+.breadcrumb{
+    padding: 12px 0px;
 }
