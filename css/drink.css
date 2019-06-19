@@ -115,11 +115,14 @@
         margin: 0px 0px 20px 0px;
     }
  }
-.card-row{
+/*.card-row{
     justify-content: space-evenly;
-}
+}*/
 .card{
-   width: 100%;
+    width: 80%;
+    height: 100%;
+    border: 10px;
+    margin: 20px 10px;
     align-items:center;
 }
 
@@ -130,16 +133,30 @@
     .card_bg{
         background-color: rgba(255, 255, 255,0); 
     }
+    .card-img-top{
+        width:65%;
+        margin-top: 20px;
+    }
 }
 @media screen and (min-width: 768px) {
     .card_bg{
         background-color: rgba(255, 255, 255, 0); 
     }
     .card{
-        width: 100%;
+        width: 80%;
+    }
+    .card-img-top{
+        width:75%;
+        margin-top: 20px;
     }
  }
 .card-img-top{
     width:60%;
     margin-top: 20px;
+}
+.card-name
+{
+    color:#7f5757;
+    font-weight: bold;
+    font-family: 'Microsoft JhengHei';
 }
