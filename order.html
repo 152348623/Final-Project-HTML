@@ -5,15 +5,20 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="Content-Security-Policy" content="img-src * 'self' data: https:">
+  <title>湯明茶樓 | 我要預約</title>
+
+  <!-- jQuery -->
+  <script src="js/jquery.min.js"></script>
+
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
     integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+  <!-- Custom CSS/JS-->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/Philosophy.css">
   <link rel="stylesheet" href="css/order.css">
-
-  <meta http-equiv="Content-Security-Policy" content="img-src * 'self' data: https:">
-  <title>Hello, world!</title>
 </head>
 
 <body background="images/background.jpg">
@@ -22,9 +27,8 @@
       <div class="row ph-row-1">
         <div class="col-lg-3 col-md-1 col-xs-1 menu">
           <nav class="navbar fixed-top navbar-expand-lg navbar-dark nav-menu">
-            <button class="navbar-toggler" type="button" data-toggle="collapse"
-              data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-              aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse nav-display nav-container" id="navbarSupportedContent">
@@ -52,16 +56,16 @@
                 </li>
                 <hr>
                 <li class="nav-item dropdown li-content">
-                    <a class="nav-link dropdown-toggle nav-li-a-content" href="#" id="navbarDropdownMenuLink"
-                      role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                      style="color:black;">
-                      菜單介紹
-                    </a>
-                    <div class="dropdown-menu nav-li-a-content" aria-labelledby="navbarDropdownMenuLink">
-                      <a class="dropdown-item nav-li-a-content" href="#">主餐</a>
-                      <a class="dropdown-item nav-li-a-content" href="#">飲品</a>
-                    </div>
-                  </li>
+                  <a class="nav-link dropdown-toggle nav-li-a-content" href="#" id="navbarDropdownMenuLink"
+                    role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                    style="color:black;">
+                    菜單介紹
+                  </a>
+                  <div class="dropdown-menu nav-li-a-content" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item nav-li-a-content" href="#">主餐</a>
+                    <a class="dropdown-item nav-li-a-content" href="#">飲品</a>
+                  </div>
+                </li>
                 <hr>
                 <li class="nav-item dropdown li-content">
                   <a class="nav-link dropdown-toggle nav-li-a-content" href="#" id="navbarDropdownMenuLink"
@@ -81,7 +85,7 @@
         <div class="col-lg-9 col-md-11 col-xs-12 div-index">
           <div class="row ph-row">
             <div class="col-lg-12 col-md-11 col-xs-12 ph-title">
-              湯明茶樓 經營理念
+              湯明茶樓 我要預約
             </div>
             <div class="col-lg-12 col-md-11 col-xs-12">
               <hr>
@@ -90,45 +94,49 @@
               <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="#" class="breadcrumb-item-content">首頁</a></li>
-                  <li class="breadcrumb-item"><a href="#" class="breadcrumb-item-content">餐廳介紹</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">經營理念</li>
+                  <li class="breadcrumb-item"><a href="#" class="breadcrumb-item-content">網路預約</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">我要預約</li>
                 </ol>
               </nav>
             </div>
             <div class="col-lg-12 col-md-11 col-xs-12">
-              <div class="row Philosophy-content">
-                <div class="col-lg-7 col-md-12 col-xs-12  resume">
-                  <p class="resume__description">
-                    <!-- <h6> -->
-                    新竹最美的時尚老宅 <br> <br>
-
-                    我們將巷弄內50年的老宅~重新賦予新的簡約時尚面貌，<br>
-                    直達3樓視覺貫穿的空間設計，<br>
-                    讓大家體驗不一樣的環境舒適感<br>
-
-                    摩登簡約的現代感空間我們提供的是新式的"台菜餐點"<br>
-                    希望用最樸實的美食來與各位分享<br>
-
-                    茶樓初心就是分享好茶、好環境、好美味的餐點，<br>
-                    想把好茶介紹給大家，原葉現沏，享受台茶新滋味，<br>
-                    每一杯都是新鮮現泡才能喝出好茶的好味道，<br>
-                    喝台茶也是可以很時尚<br>
-                    歡迎大家～涖臨我們用心推出的台菜餐廳<br>
-
-                    全日提供湯明全食套餐～<br>
-                    也歡迎大家預約用餐<br>
-                    湯明茶樓<br>
-                  </p>
-                  <!-- </h6>  -->
+              <div class="form-group row">
+                <label for="number" class="col-form-label">手機號碼：</label>
+                <div class="col-sm-6">
+                  <input type="number" class="form-control-sm" id="number">
                 </div>
-                <div class="col-lg-5 col-md-12 col-xs-12 ph-content-img">
-                  <img src="images/Philosophy.jpg" alt="" class="content-img">
+                <br>
+                <label for="date" class="col-form-label">預約日期：</label>
+                <div class="col-sm-6">
+                  <input type="date" class="form-control-sm" id="date">
                 </div>
+                <br>
+                <label for="time" class="col-form-label">預約時間：</label>
+                <div class="col-sm-6">
+                  <input type="time" class="form-control-sm" id="time">
+                </div>
+                <br>
+                <label for="persons" class="col-form-label">預約人數：</label>
+                <div class="col-sm-6">
+                  <input type="number" class="form-control-sm" id="persons">
+                </div>
+                <br>
+                <button type="submit" class="btn btn-primary" id="btnSubmit" onClick="submitClick()">確定預約</button>
+                </form>
               </div>
             </div>
-          </div> <!-- row -->
-        </div>
+            <!-- <div class="col-lg-12 col-md-11 col-xs-12">
+              <div class="row text-center justify-content-center">
+                <div class="success">
+                  <h3>預約成功！</h3>
+
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div> <!-- row -->
       </div>
+    </div>
     </div>
   </header>
   <footer>
@@ -147,6 +155,30 @@
     </div>
   </footer>
   <!-- Optional JavaScript -->
+  
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+  
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#config-web-app -->
+  <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-database.js"></script>
+  
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyAaFSXrEkJr-cAuYbgi_0Jed4bEEOEAL0Y",
+      authDomain: "final-project-html-d6409.firebaseapp.com",
+      databaseURL: "https://final-project-html-d6409.firebaseio.com",
+      projectId: "final-project-html-d6409",
+      storageBucket: "final-project-html-d6409.appspot.com",
+      messagingSenderId: "652906834518",
+      appId: "1:652906834518:web:e81047d4b26c5f8d"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+  <script src="js/script.js"></script>
+
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -157,6 +189,6 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
     integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
     crossorigin="anonymous"></script>
-</body>
 
+  </body>
 </html>
