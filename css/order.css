@@ -13,7 +13,6 @@
 .ph-title{
     color: rgb(127, 87, 87);
     font-size: 30px;
-    font-family: "sans-serif";
     font-weight: bold;
     font-style: italic;
 }
@@ -23,23 +22,34 @@
 }
 @media screen and (min-width: 320px) {
     .ph-title{
-    padding: 18px 0px 0px 15px;
+        color: rgb(127, 87, 87);
+        padding: 0px 0px 0px 35px;
+        font-family: 'Noto Sans TC';
     font-size: 25px;
+    font-weight: 900;
+    position: fixed;
+    z-index: 2000;
+    margin-top: -33px;
     }
     .Philosophy-content{
         background-color: rgba(255, 255, 255,0); 
+    }
+    .ph-row{
+        margin:50px 0px 45px 0px;
     }
 }
 @media screen and (min-width: 768px) {
     .ph-title{
         padding-left: 10px;
         font-size:30px;
+        margin: -33px 0px 0px 4px;
+
         }
     .content-img{
         width: 40%;
     }
     .ph-row{
-        margin:0px 0px 45px 0px;
+        margin:43px 0px 45px 0px;
     }
     .Philosophy-content{
         background-color: rgba(255, 255, 255, 0.5); 
@@ -55,6 +65,16 @@
     }
     .content-img{
         width: 100%;
+    }
+    .ph-title{
+        color: rgb(127, 87, 87);
+
+        font-size: 40px;
+        padding: 60px 0px 0px 15px;
+        position: relative;
+        z-index: inherit;
+        margin: initial;
+    
     }
  }
 
@@ -76,7 +96,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 0px;
 
     }
 
@@ -86,7 +105,6 @@
 }
 .nav-li-a-content{
     color: black;
-    text-align: center;
 }
 .breadcrumb{
     background-color: rgba(255, 255, 255,0);
@@ -99,4 +117,78 @@
     color:black;
     text-decoration: underline;
 }
- 
+ .form-control-sm{
+     width: 200px;
+ }
+
+ .form-control-sm{
+     border: 5px;
+     border-radius:  solid 5px black;
+ }
+ .submit-btn{
+    border:2px solid white;
+    border-radius: 4px;
+    width: 200px;
+    background-color: rgb(127, 87, 87);
+    height: 40px; 
+    color: white;
+    font-family:'Noto Sans TC';
+    font-size: 20px;
+    font-weight: bold;
+    line-height:1px;
+  }
+  .submit-btn:hover{
+    width: 200px;
+    height: 50px;
+    border:2px solid white;
+    background-color: rgb(127, 87, 87,0.5);
+    color: rgb(12, 10, 10);
+    transition: all .5s ease;
+  }
+  .submit-div{
+      text-align: center;
+  } 
+   .form-group{
+      margin-left: -50px;
+      background-color: rgba(255, 255, 255, 0.288);
+  }
+  @media screen and (min-width: 320px) {
+    .form-group{
+        background-color: rgba(255, 255, 255, 0.288);
+        text-align: center;
+        padding-top:10px;
+        padding-bottom: 10px;
+    }
+
+ }
+  @media screen and (min-width: 768px) {
+    .form-group{
+
+        margin-left: -50px;
+        background-color: rgba(255, 255, 255, 0.288);
+    }
+
+ }
+ @media screen and (min-width: 1024px) {
+    .form-group{
+        margin-left: -500px;
+        background-color: rgba(255, 255, 255, 0);
+    }
+    .label-div{
+        text-align: right;
+    }
+.label-div-right{
+    text-align: right;
+}
+.label-div-left{
+    text-align: left;
+    padding-top: 10px;
+}
+.col-form-label{
+    font-size: 25px;
+
+}
+ }
+ .form-control-sm{
+     text-align: center;
+ }

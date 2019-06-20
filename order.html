@@ -6,19 +6,37 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="Content-Security-Policy" content="img-src * 'self' data: https:">
-  <title>湯明茶樓 | 我要預約</title>
+  <title>湯明茶樓歡迎您~</title>
 
   <!-- jQuery -->
-  <script src="js/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js "></script>
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
     integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js "></script>
   <!-- Custom CSS/JS-->
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/Philosophy.css">
   <link rel="stylesheet" href="css/order.css">
+  <script type="text/javascript">
+    $(function() {
+        /* 按下GoTop按鈕時的事件 */
+        $('#gotop').click(function(){
+            $('html,body').animate({ scrollTop: 0 }, 'quick');   /* 返回到最頂上 */
+            return false;
+        });
+        
+        /* 偵測卷軸滑動時，往下滑超過400px就讓GoTop按鈕出現 */
+        $(window).scroll(function() {
+            if ( $(this).scrollTop() > 10){
+                $('#gotop').fadeIn();
+            } else {
+                $('#gotop').fadeOut();
+            }
+        });
+    });
+    </script>
 </head>
 
 <body background="images/background.jpg">
@@ -45,13 +63,13 @@
                     餐廳介紹
                   </a>
                   <div class="dropdown-menu nav-li-a-content" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item nav-li-a-content" href="#">關於</a>
-                    <a class="dropdown-item nav-li-a-content" href="#">經營理念</a>
+                    <a class="dropdown-item nav-li-a-content" href="about.html">關於</a>
+                    <a class="dropdown-item nav-li-a-content" href="Philosophy.html">經營理念</a>
                   </div>
                 </li>
                 <hr>
                 <li class="nav-item li-content">
-                  <a class="nav-link text-body nav-li-a-content .news-content" href="new.html">最新消息
+                  <a class="nav-link text-body nav-li-a-content .news-content" href="new.html" style="padding-right: 22px">最新消息
                   </a>
                 </li>
                 <hr>
@@ -62,22 +80,27 @@
                     菜單介紹
                   </a>
                   <div class="dropdown-menu nav-li-a-content" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item nav-li-a-content" href="#">主餐</a>
-                    <a class="dropdown-item nav-li-a-content" href="#">飲品</a>
+                    <a class="dropdown-item nav-li-a-content" href="food.html">主餐</a>
+                    <a class="dropdown-item nav-li-a-content" href="drink.html">飲品</a>
+                    <a class="dropdown-item nav-li-a-content" href="cook-secret.html">私廚料理</a>
                   </div>
                 </li>
                 <hr>
-                <li class="nav-item dropdown li-content">
+                <li class="nav-item li-content">
+                    <a class="nav-link text-body nav-li-a-content" href="order.html" style="padding-right: 22px;">網路預約
+                    </a>
+                  </li>
+                <!-- <li class="nav-item dropdown li-content">
                   <a class="nav-link dropdown-toggle nav-li-a-content" href="#" id="navbarDropdownMenuLink"
                     role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
                     style="color:black;">
                     網路預約
                   </a>
                   <div class="dropdown-menu nav-li-a-content" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item nav-li-a-content" href="#">預約</a>
+                    <a class="dropdown-item nav-li-a-content" href="order.html">預約</a>
                     <a class="dropdown-item nav-li-a-content" href="#">預約查詢</a>
                   </div>
-                </li>
+                </li> -->
               </ul>
             </div>
           </nav>
@@ -93,36 +116,50 @@
             <div class="col-lg-12 col-md-11 col-xs-12">
               <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="#" class="breadcrumb-item-content">首頁</a></li>
-                  <li class="breadcrumb-item"><a href="#" class="breadcrumb-item-content">網路預約</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">我要預約</li>
+                  <li class="breadcrumb-item"><a href="index.html" class="breadcrumb-item-content">首頁</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">網路預約 - 我要預約</li>
                 </ol>
               </nav>
             </div>
             <div class="col-lg-12 col-md-11 col-xs-12">
               <div class="form-group row">
-                <label for="number" class="col-form-label">手機號碼：</label>
-                <div class="col-sm-6">
-                  <input type="number" class="form-control-sm" id="number">
+                
+                <div class="col-lg-6 col-sm-6 label-div">
+                    <label for="number" class="col-form-label abel-div-right">手機號碼：</label>
+                  </div>
+                  <div class="col-lg-6 col-sm-6 label-div-left">
+                    <input type="text" class="form-control-sm" id="number">
                 </div>
                 <br>
-                <label for="date" class="col-form-label">預約日期：</label>
-                <div class="col-sm-6">
-                  <input type="date" class="form-control-sm" id="date">
+                <div class="col-lg-6 col-sm-6 label-div abel-div-right">
+                    <label for="date" class="col-form-label">預約日期：</label>
+                  </div>
+                    <div class="col-lg-6 col-sm-6 label-div-left">
+                    <input type="date" class="form-control-sm" id="date">
                 </div>
                 <br>
-                <label for="time" class="col-form-label">預約時間：</label>
-                <div class="col-sm-6">
-                  <input type="time" class="form-control-sm" id="time">
+                <div class="col-lg-6 col-sm-6 label-div-right">
+                    <label for="time" class="col-form-label">預約時間：</label>
+                  </div>
+                    <div class="col-lg-6 col-sm-6 label-div-left">
+
+                    <input type="time" class="form-control-sm" id="time">
                 </div>
                 <br>
-                <label for="persons" class="col-form-label">預約人數：</label>
-                <div class="col-sm-6">
-                  <input type="number" class="form-control-sm" id="persons">
-                </div>
+                <div class="col-lg-6 col-sm-6 label-div abel-div-right">
+                    <label for="persons" class="col-form-label">預約人數：</label>
+                  </div>
+                  <div class="col-lg-6 col-sm-6 label-div-left">
+                  <input type="number" class="form-control-sm " id="persons">
+                </div>  
                 <br>
-                <button type="submit" class="btn btn-primary" id="btnSubmit" onClick="submitClick()">確定預約</button>
-                </form>
+                <br>
+                <br>
+                <div class="col-lg-12 col-sm-12 submit-div">
+               <a href="checkOrder.html"> <button type="submit" class="btn btn-primary submit-btn col-form-label" id="btnSubmit" onClick="submitClick()" >確定預約</button>
+               </a>
+              </form>
+              </div>
               </div>
             </div>
             <!-- <div class="col-lg-12 col-md-11 col-xs-12">
@@ -141,6 +178,7 @@
   </header>
   <footer>
     <div class="container">
+        <div id="gotop">˄</div>  
       <div class="row footer-row">
         <div class="col-lg-4 col-md-12 footer-content">
           連絡電話：03 - 527 - 7559
@@ -180,9 +218,9 @@
   <script src="js/script.js"></script>
 
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
     integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
     crossorigin="anonymous"></script>

@@ -8,10 +8,30 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
     integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js "></script>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/Philosophy.css">
   <meta http-equiv="Content-Security-Policy" content="img-src * 'self' data: https:">
-  <title>Hello, world!</title>
+  <title>湯明茶樓歡迎您~</title>
+  <script type="text/javascript">
+    $(function() {
+        /* 按下GoTop按鈕時的事件 */
+        $('#gotop').click(function(){
+            $('html,body').animate({ scrollTop: 0 }, 'quick');   /* 返回到最頂上 */
+            return false;
+        });
+        
+        /* 偵測卷軸滑動時，往下滑超過400px就讓GoTop按鈕出現 */
+        $(window).scroll(function() {
+            if ( $(this).scrollTop() > 10){
+                $('#gotop').fadeIn();
+            } else {
+                $('#gotop').fadeOut();
+            }
+        });
+    });
+    </script>
 </head>
 
 <body background="images/background.jpg">
@@ -45,7 +65,7 @@
                 </li>
                 <hr>
                 <li class="nav-item li-content">
-                  <a class="nav-link text-body nav-li-a-content .news-content" href="new.html" style="padding-right: 38px;">
+                  <a class="nav-link text-body nav-li-a-content .news-content" href="new.html" style="padding-right: 25px;">
                     最新消息
                   </a>
                 </li>
@@ -59,10 +79,15 @@
                     <div class="dropdown-menu nav-li-a-content" aria-labelledby="navbarDropdownMenuLink">
                       <a class="dropdown-item nav-li-a-content" href="food.html">主餐</a>
                       <a class="dropdown-item nav-li-a-content" href="drink.html">飲品</a>
+                      <a class="dropdown-item nav-li-a-content" href="cook-secret.html">私廚料理</a>
                     </div>
                   </li>
                 <hr>
-                <li class="nav-item dropdown li-content">
+                <li class="nav-item li-content">
+                    <a class="nav-link text-body nav-li-a-content" href="order.html" style="padding-right: 25px;">網路預約
+                    </a>
+                  </li>
+                <!-- <li class="nav-item dropdown li-content">
                   <a class="nav-link dropdown-toggle nav-li-a-content" href="#" id="navbarDropdownMenuLink"
                     role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
                     style="color:black;">
@@ -72,7 +97,7 @@
                     <a class="dropdown-item nav-li-a-content" href="#">預約</a>
                     <a class="dropdown-item nav-li-a-content" href="#">預約查詢</a>
                   </div>
-                </li>
+                </li> -->
               </ul>
             </div>
           </nav>
@@ -93,29 +118,29 @@
                 </ol>
               </nav>
             </div>
-            <div class="col-lg-12 col-md-11 col-xs-12">
+            <div class="col-lg-12 col-md-11 col-xs-12 breadcrumb-col">
               <div class="row Philosophy-content">
                 <div class="col-lg-7 col-md-12 col-xs-12  resume">
                   <p class="resume__description">
                     <!-- <h6> -->
                     新竹最美的時尚老宅 <br> <br>
 
-                    我們將巷弄內50年的老宅~重新賦予新的簡約時尚面貌，<br>
-                    直達3樓視覺貫穿的空間設計，<br>
-                    讓大家體驗不一樣的環境舒適感<br>
+                    我們將巷弄內50年的老宅~重新賦予新的簡約時尚面貌<br>
+                    直達3樓視覺貫穿的空間設計<br>
+                    讓大家體驗不一樣的環境舒適感<br><br>
 
                     摩登簡約的現代感空間我們提供的是新式的"台菜餐點"<br>
-                    希望用最樸實的美食來與各位分享<br>
+                    希望用最樸實的美食來與各位分享<br><br>
 
-                    茶樓初心就是分享好茶、好環境、好美味的餐點，<br>
-                    想把好茶介紹給大家，原葉現沏，享受台茶新滋味，<br>
-                    每一杯都是新鮮現泡才能喝出好茶的好味道，<br>
+                    茶樓初心就是分享好茶、好環境、好美味的餐點<br>
+                    想把好茶介紹給大家，原葉現沏，享受台茶新滋味<br>
+                    每一杯都是新鮮現泡才能喝出好茶的好味道<br>
                     喝台茶也是可以很時尚<br>
-                    歡迎大家～涖臨我們用心推出的台菜餐廳<br>
+                    歡迎大家～蒞臨我們用心推出的台菜餐廳<br><br>
 
-                    全日提供湯明全食套餐～<br>
+                    全日提供湯明全食套餐<br>
                     也歡迎大家預約用餐<br>
-                    湯明茶樓<br>
+                    湯明茶樓歡迎您～<br>
                   </p>
                   <!-- </h6>  -->
                 </div>
@@ -131,6 +156,8 @@
   </header>
   <footer>
     <div class="container">
+        <div id="gotop">˄</div>   
+
       <div class="row footer-row">
         <div class="col-lg-4 col-md-12 footer-content">
           連絡電話：03 - 527 - 7559
@@ -146,9 +173,9 @@
   </footer>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
     integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
     crossorigin="anonymous"></script>

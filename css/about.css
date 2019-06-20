@@ -13,8 +13,7 @@
 .ph-title{
     color: rgb(127, 87, 87);
     font-size: 30px;
-    font-family: "sans-serif";
-    font-weight: bold;
+    font-weight: 900;
     font-style: italic;
 }
 .Philosophy-content{
@@ -23,38 +22,66 @@
 }
 @media screen and (min-width: 320px) {
     .ph-title{
-    padding: 18px 0px 0px 15px;
+        color: rgb(127, 87, 87);
+        padding: 0px 0px 0px 35px;
     font-size: 25px;
+    font-weight: 900;
+    position: fixed;
+    z-index: 2000;
+    margin-top: -33px;
     }
     .Philosophy-content{
         background-color: rgba(255, 255, 255,0); 
+    }
+    .ph-row{
+        margin:50px 0px 45px 0px;
     }
 }
 @media screen and (min-width: 768px) {
     .ph-title{
         padding-left: 10px;
         font-size:30px;
+        margin: -33px 0px 0px 4px;
+
         }
     .content-img{
         width: 40%;
     }
     .ph-row{
-        margin:0px 0px 45px 0px;
+        margin:43px 0px 45px 0px;
     }
     .Philosophy-content{
         background-color: rgba(255, 255, 255, 0.5); 
         padding:20px 0px;
+    }
+    .ph-content-img{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
     }
  }
  @media screen and (min-width: 769px) {
     .Philosophy-content{
         white-space: nowrap;
     }
+    .ph-title{
+        color: rgb(127, 87, 87);
+
+        font-size: 40px;
+        padding: 60px 0px 0px 15px;
+        position: relative;
+        z-index: inherit;
+        margin: initial;
+    
+    }
     .ph-row{
         margin:140px 0px 0px 0px;
     }
     .content-img{
         width: 100%;
+    }
+    .resume__description{
+        font-size: 25px;
     }
  }
 .resume{
@@ -63,20 +90,8 @@
     align-items: center;
     display: flex;
 }
- .ph-content-img{
-     display: flex;
-     justify-content: center;
-     align-items: center;
- }
- @media screen and (min-width: 768px) {
-    .ph-content-img{
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        
-    }
 
- }
+
  @media screen and (min-width: 1024px) {
     .ph-content-img{
         display: flex;
@@ -91,7 +106,6 @@
 }
 .nav-li-a-content{
     color: black;
-    text-align: center;
 }
 .breadcrumb{
     background-color: rgba(255, 255, 255,0);

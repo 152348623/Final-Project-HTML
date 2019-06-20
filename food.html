@@ -8,11 +8,32 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
     integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js "></script>
+
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/food.css">
 
   <meta http-equiv="Content-Security-Policy" content="img-src * 'self' data: https:">
-  <title>Hello, world!</title>
+  <title>湯明茶樓歡迎您~</title>
+  <script type="text/javascript">
+    $(function() {
+        /* 按下GoTop按鈕時的事件 */
+        $('#gotop').click(function(){
+            $('html,body').animate({ scrollTop: 0 }, 'quick');   /* 返回到最頂上 */
+            return false;
+        });
+        
+        /* 偵測卷軸滑動時，往下滑超過400px就讓GoTop按鈕出現 */
+        $(window).scroll(function() {
+            if ( $(this).scrollTop() > 10){
+                $('#gotop').fadeIn();
+            } else {
+                $('#gotop').fadeOut();
+            }
+        });
+    });
+    </script>
 </head>
 
 <body background="images/background.jpg">
@@ -45,7 +66,7 @@
                 </li>
                 <hr>
                 <li class="nav-item li-content">
-                  <a class="nav-link text-body nav-li-a-content" href="new.html" style="padding-right: 38px;">最新消息
+                  <a class="nav-link text-body nav-li-a-content" href="new.html" style="padding-right: 27px;">最新消息
                   </a>
                 </li>
                 <hr>
@@ -57,11 +78,16 @@
                   </a>
                   <div class="dropdown-menu nav-li-a-content" aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item nav-li-a-content" href="food.html">主餐</a>
-                    <a class="dropdown-item nav-li-a-content" href="#">飲品</a>
+                    <a class="dropdown-item nav-li-a-content" href="drink.html">飲品</a>
+                    <a class="dropdown-item nav-li-a-content" href="cook-secret.html">私廚料理</a>
                   </div>
                 </li>
                 <hr>
-                <li class="nav-item dropdown li-content">
+                <li class="nav-item li-content">
+                    <a class="nav-link text-body nav-li-a-content" href="order.html" style="padding-right: 27px;">網路預約
+                    </a>
+                  </li>
+                <!-- <li class="nav-item dropdown li-content">
                   <a class="nav-link dropdown-toggle nav-li-a-content" href="#" id="navbarDropdownMenuLink"
                     role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
                     style="color:black;">
@@ -71,7 +97,7 @@
                     <a class="dropdown-item nav-li-a-content" href="#">預約</a>
                     <a class="dropdown-item nav-li-a-content" href="#">預約查詢</a>
                   </div>
-                </li>
+                </li> -->
               </ul>
             </div>
           </nav>
@@ -84,7 +110,7 @@
             <div class="col-lg-12 col-md-11 col-xs-12">
               <hr>
             </div>
-            <div class="col-lg-12 col-md-11 col-xs-12">
+            <div class="col-lg-12 col-md-11 col-xs-12 breadcrumb-col">
               <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="#" class="breadcrumb-item-content">首頁</a></li>
@@ -121,6 +147,7 @@
                     <div class="card-body">
                         <h4 class="card-name">糖醋豬柳</h4>
                       <p class="card-text">酸酸甜甜的醬汁，搭配多汁的豬肉及時蔬，讓人忍不住口水直流了呢!</p>
+
                     </div>
                   </div>
                 </div> <!-- 第三種-->
@@ -151,6 +178,7 @@
   </header>
   <footer>
     <div class="container">
+        <div id="gotop">˄</div>
       <div class="row footer-row">
         <div class="col-lg-4 col-md-12 footer-content">
           連絡電話：03 - 527 - 7559
@@ -166,9 +194,9 @@
   </footer>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
     integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
     crossorigin="anonymous"></script>
