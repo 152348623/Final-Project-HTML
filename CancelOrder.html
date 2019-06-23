@@ -5,34 +5,44 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="Content-Security-Policy" content="img-src * 'self' data: https:">
+  <title>湯明茶樓歡迎您~</title>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js "></script>
+  <!-- Add additional services that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-storage.js"></script>
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
     integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.4.1.min.js "></script>
+  <!-- Custom CSS/JS-->
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/drink.css">
+  <link rel="stylesheet" href="css/cancelOrder.css">
+  <script src="js/cancelOrder.js"></script>
 
-  <meta http-equiv="Content-Security-Policy" content="img-src * 'self' data: https:">
-  <title>湯明茶樓歡迎您~</title>
   <script type="text/javascript">
-    $(function() {
-        /* 按下GoTop按鈕時的事件 */
-        $('#gotop').click(function(){
-            $('html,body').animate({ scrollTop: 0 }, 'quick');   /* 返回到最頂上 */
-            return false;
-        });
-        
-        /* 偵測卷軸滑動時，往下滑超過400px就讓GoTop按鈕出現 */
-        $(window).scroll(function() {
-            if ( $(this).scrollTop() > 10){
-                $('#gotop').fadeIn();
-            } else {
-                $('#gotop').fadeOut();
-            }
-        });
+    $(function () {
+      /* 按下GoTop按鈕時的事件 */
+      $('#gotop').click(function () {
+        $('html,body').animate({ scrollTop: 0 }, 'quick');   /* 返回到最頂上 */
+        return false;
+      });
+
+      /* 偵測卷軸滑動時，往下滑超過400px就讓GoTop按鈕出現 */
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 10) {
+          $('#gotop').fadeIn();
+        } else {
+          $('#gotop').fadeOut();
+        }
+      });
     });
-    </script>
+  </script>
 </head>
 
 <body background="images/background.jpg">
@@ -65,7 +75,8 @@
                 </li>
                 <hr>
                 <li class="nav-item li-content">
-                  <a class="nav-link text-body nav-li-a-content" href="new.html" style="padding-right: 26px;">最新消息
+                  <a class="nav-link text-body nav-li-a-content .news-content" href="new.html"
+                    style="padding-right: 22px">最新消息
                   </a>
                 </li>
                 <hr>
@@ -82,6 +93,7 @@
                   </div>
                 </li>
                 <hr>
+
                 <li class="nav-item dropdown li-content">
                   <a class="nav-link dropdown-toggle nav-li-a-content" href="#" id="navbarDropdownMenuLink"
                     role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
@@ -89,11 +101,11 @@
                     網路預約
                   </a>
                   <div class="dropdown-menu nav-li-a-content" aria-labelledby="navbarDropdownMenuLink">
-                      <a class="dropdown-item nav-li-a-content" href="order.html">預約</a>
-                      <a class="dropdown-item nav-li-a-content" href="InquireOrder.html">預約查詢</a>
-                      <a class="dropdown-item nav-li-a-content" href="CancelOrder.html">取消預約</a>
+                    <a class="dropdown-item nav-li-a-content" href="order.html">預約</a>
+                    <a class="dropdown-item nav-li-a-content" href="InquireOrder.html">預約查詢</a>
+                    <a class="dropdown-item nav-li-a-content" href="CancelOrder.html">取消預約</a>
                   </div>
-                </li> 
+                </li>
               </ul>
             </div>
           </nav>
@@ -101,83 +113,76 @@
         <div class="col-lg-9 col-md-11 col-xs-12 div-index">
           <div class="row ph-row">
             <div class="col-lg-12 col-md-11 col-xs-12 ph-title">
-              湯明各式飲品
+              湯明茶樓 我要取消
             </div>
             <div class="col-lg-12 col-md-11 col-xs-12">
               <hr>
             </div>
             <div class="col-lg-12 col-md-11 col-xs-12">
-              <nav aria-label="breadcrumb breadcrumb-col">
+              <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="index.html" class="breadcrumb-item-content">首頁</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">菜單 - 飲品</li>
+                  <li class="breadcrumb-item active" aria-current="page">網路預約 - 我要取消
+                  </li>
                 </ol>
               </nav>
             </div>
             <div class="col-lg-12 col-md-11 col-xs-12">
-              <div class="row card-row">
-                <div class="col-lg-6 col-md-6 col-xs-12 Philosophy-content card_bg">
-                  <div class="card ">
-                    <img class="card-img-top" src="images/menu_tea1.jpg" alt="Card image cap">
-                    <div class="card-body">
-                      <h4 class="card-name">正阿里山烏龍茶-阿里山石桌區</h4>
-                      <p class="card-text">這是湯明的茶種中以香氣取勝的，一樣是青心烏龍種，發酵程度較低，可聞到高山茶特有的花果香，味道柔和且飽 滿，是台灣高山茶中的經典，不容錯過!!</p>
-                    </div>
-                  </div>
+              <div class="form-group row">
+                <div class="col-lg-5 col-sm-6 label-div">
+                  <label for="number" class="col-form-label abel-div-right" >輸入手機號碼：</label>
                 </div>
-                <!--第一種 -->
-
-                <div class="col-lg-6 col-md-6 col-xs-12 Philosophy-content card_bg">
-                  <div class="card ">
-                    <img class="card-img-top" src="images/menu_tea2.jpg" alt="Card image cap">
-                    <div class="card-body">
-                      <h4 class="card-name">凍頂烏龍-鹿谷鄉凍頂村</h4>
-                      <p class="card-text">
-                        我們凍頂是用青心烏龍種，採收成熟度較高的對口葉，不論是萎凋、攪拌、發酵、烘焙都較重，以滋味韻味獨領風騷。湯明的凍頂有著淡淡的糖果甜味和重焙火的香氣，很是特別。</p>
-                    </div>
+                <div class="col-lg-5 col-sm-6 label-div-left">
+                  <input type="text" class="form-control-sm" id="InquireNumber" required>
+                </div>
+                <div class="col-lg-5 col-sm-6 label-div">
+                  <label for="number" class="col-form-label abel-div-right">手機號碼：</label>
+                </div>
+                <div class="col-lg-5 col-sm-6 label-div-left">
+                  <h4 id="number" class="form-control-sm"></h4>
+                </div>
+                <div class="col-lg-5 col-sm-6 label-div abel-div-right">
+                  <label for="date" class="col-form-label">預約日期：</label>
+                </div>
+                <div class="col-lg-5 col-sm-6 label-div-left">
+                  <h4 id="datepicker" class="form-control-sm"></h4>
+                </div>
+                <div class="col-lg-5 col-sm-6 label-div-right">
+                  <label for="time" class="col-form-label">預約時間：</label>
+                </div>
+                <div class="col-lg-5 col-sm-6 label-div-left time">
+                  <h4 id="hours" class="form-control-sm time-h4"></h4>
+                  <label class="commat">：</label>
+                  <h4 id="minutes" class="form-control-sm time-h4"></h4>
+                </div>
+                <div class="col-lg-5 col-sm-6 label-div abel-div-right">
+                  <label for="persons" class="col-form-label">預約人數：</label>
+                </div>
+                <div class="col-lg-5 col-sm-6 label-div-left">
+                  <h4 id="persons" class="form-control-sm"></h4>
+                </div>
+                <br>
+                <br>
+                <br>
+                <div class="col-lg-6 col-sm-6 submit-div">
+                  <a href="#"> <input type="submit" class="btn btn-primary submit-btn col-form-label" id="btnCancel" value="取消預約"></button>
+                  </a>
+                </div>
+                <div class="col-lg-6 col-sm-6 submit-div">
+                    <a href="#"> <input type="submit" class="btn btn-primary submit-btn col-form-label" id="btnCancelTrue" value=""></button>
+                    </a>
                   </div>
-                </div> <!-- 第二種-->
-
-                <div class="col-lg-6 col-md-6 col-xs-12 Philosophy-content card_bg">
-                  <div class="card ">
-                    <img class="card-img-top" src="images/menu_tea3.jpg" alt="Card image cap">
-                    <div class="card-body">
-                      <h4 class="card-name">東方美人茶-苗栗頭份山區</h4>
-                      <p class="card-text">湯明的東美是正統的青心大冇樹種，苗栗頭份山區正夏出產的，發酵程度較高，但口感卻是清新，因有小綠葉蟬咬過，帶有獨特的蜜香，是和大自然合作出來的特殊茶種。
-                      </p>
-                    </div>
-                  </div>
-                </div> <!-- 第三種-->
-                <div class="col-lg-6 col-md-6 col-xs-12 Philosophy-content card_bg">
-                  <div class="card ">
-                    <img class="card-img-top" src="images/menu_tea4.jpg" alt="Card image cap">
-                    <div class="card-body">
-                      <h4 class="card-name">青心大冇紅茶-苗栗頭份山區</h4>
-                      <p class="card-text">條索狀青心大冇種，因為有小綠葉蟬咬過，所有會有特殊的花蜜香味哦，入口後又有淡淡的青草味，甘甜醇厚滑潤，沖泡溫度不宜過高，87度最佳。</p>
-                    </div>
-                  </div>
-                </div> <!-- 第四種-->
-                <div class="col-lg-6 col-md-6 col-xs-12 Philosophy-content card_bg">
-                  <div class="card ">
-                    <img class="card-img-top" src="images/menu_tea5.jpg" alt="Card image cap">
-                    <div class="card-body">
-                      <h4 class="card-name">正欉木柵鐵觀音-木柵</h4>
-                      <p class="card-text">
-                        顧名思義「正欉」的意思就是真正的鐵觀音，用真正的鐵觀音樹種以鐵觀音獨特慢火揉的作法，才會有那酸甜清透的果酸滋味，有會有那獨有的觀音韻，而不是惱人的火味。這就是我們所找的「正欉木柵鐵觀音」
-                      </p>
-                    </div>
-                  </div>
-                </div> <!-- 第五種-->
               </div>
             </div>
-          </div> <!-- row -->
-        </div>
+          </div>
+        </div> <!-- row -->
       </div>
+    </div>
     </div>
   </header>
   <footer>
-    <div class="container">
-        <div id="gotop">˄</div>   
+    <div class="container" style="margin-top: 200px;">
+      <div id="gotop">˄</div>
       <div class="row footer-row">
         <div class="col-lg-4 col-md-12 footer-content">
           連絡電話：03 - 527 - 7559
@@ -192,6 +197,9 @@
     </div>
   </footer>
   <!-- Optional JavaScript -->
+
+
+
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -202,6 +210,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
     integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
     crossorigin="anonymous"></script>
+
 </body>
 
 </html>
