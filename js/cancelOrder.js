@@ -1,6 +1,6 @@
 $(document).ready(function () {
   // Initialize Firebase
-
+	// test
   var config = {
     apiKey: "AIzaSyDSeIojp74bFSagbOuKfWfbvDU2VXeuxqM",
     authDomain: "final-project-c2ad5.firebaseapp.com",
